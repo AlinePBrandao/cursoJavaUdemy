@@ -11,7 +11,7 @@ public class Main {
             if (i % 2 != 0){
                 System.out.println(i);
             }
-        }
+        } //testando
         sc.close();
     }
 }
