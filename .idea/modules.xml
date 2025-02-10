@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/DIO/DIO.iml" filepath="$PROJECT_DIR$/DIO/DIO.iml" />
       <module fileurl="file://$PROJECT_DIR$/Exemplos/Exemplos.iml" filepath="$PROJECT_DIR$/Exemplos/Exemplos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercicios_Aula/Exercicios_Aula.iml" filepath="$PROJECT_DIR$/Exercicios_Aula/Exercicios_Aula.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tentativa/Tentativa.iml" filepath="$PROJECT_DIR$/Tentativa/Tentativa.iml" />
       <module fileurl="file://$PROJECT_DIR$/cursoJavaUdemy.iml" filepath="$PROJECT_DIR$/cursoJavaUdemy.iml" />
       <module fileurl="file://$PROJECT_DIR$/maisumteste/maisumteste.iml" filepath="$PROJECT_DIR$/maisumteste/maisumteste.iml" />
