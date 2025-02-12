@@ -1,4 +1,4 @@
-package M2.Exercicios;
+package M2_Introducao.Exercicios;
 
 import java.util.Scanner;
 
