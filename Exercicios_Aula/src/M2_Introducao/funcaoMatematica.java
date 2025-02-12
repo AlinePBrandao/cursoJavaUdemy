@@ -1,4 +1,4 @@
-package M2;
+package M2_Introducao;
 
 public class funcaoMatematica {
     public static void main(String[] args) {
