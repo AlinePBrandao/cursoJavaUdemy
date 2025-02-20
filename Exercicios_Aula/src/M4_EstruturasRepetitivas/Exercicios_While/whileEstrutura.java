@@ -1,4 +1,4 @@
-package M4_EstruturasRepetitivas;
+package M4_EstruturasRepetitivas.Exercicios_While;
 
 import java.util.Scanner;
 
