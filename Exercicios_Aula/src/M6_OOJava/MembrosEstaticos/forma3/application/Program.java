@@ -14,12 +14,12 @@ public class Program {
         System.out.print("Enter radius: ");
         double radius = sc.nextDouble();
 
-        double c = Calculator.circunference(radius); //classe referenciada no método estático
-        double v = Calculator.volume(radius); //classe referenciada no método estático
-
+        double c = Calculator.circunference(radius); //classe referenciada no método estático na classe Calculator
+        double v = Calculator.volume(radius); //classe referenciada no método estático na classe Calculator
+        //membros usados independente de pbjetos usando o nome da classe
         System.out.printf("Circunference: %.2f %n", c);
         System.out.printf("Volume: %.2f %n", v);
-        System.out.printf("CPI: %.2f %n", Calculator.PI); //classe referenciada na constante estática
+        System.out.printf("CPI: %.2f %n", Calculator.PI); //classe referenciada na constante estática na classe Calculator
 
         sc.close();
     }

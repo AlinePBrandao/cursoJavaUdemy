@@ -3,8 +3,9 @@ package M6_OOJava.MembrosEstaticos.forma3.util;
 public class Calculator {
 
     public static final double PI = 3.14159;
+    //statc -constante que independe de qualquer objeto do tipo Calculator
 
-    public static double circunference(double radius){
+    public static double circunference(double radius){ //static - pode ser calculado independente objeto
         return 2.0 * PI * radius;
     }
     public static double volume(double radius){
