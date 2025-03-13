@@ -1,4 +1,4 @@
-package M6_OOJava.cotacao.util;
+package M6_OOJava.Cotacao.util;
 
 public class CurrencyConverter {
     public static double IOF = 0.06;
