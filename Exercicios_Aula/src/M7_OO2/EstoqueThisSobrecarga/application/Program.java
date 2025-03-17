@@ -1,6 +1,6 @@
-package M7_ConstructorsAndThis.EstoqueThis.application;
+package M7_OO2.EstoqueThisSobrecarga.application;
 
-import M7_ConstructorsAndThis.EstoqueThis.entities.Products;
+import M7_OO2.EstoqueThisSobrecarga.entities.Products;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -15,16 +15,14 @@ public class Program {
         String name = sc.nextLine(); //variável auxiliar temporária
         System.out.print("Price: ");
         double price = sc.nextDouble();
-        System.out.print("Quantity in stock: ");
-        int quantity = sc.nextInt();
-        Products products = new Products(name, price, quantity);
+        Products products = new Products(name, price);
 
         System.out.println();
         System.out.println("Product data: " + products.toString());
 
         System.out.println();
         System.out.print("Enter the number of products to be added in stock: ");
-        quantity = sc.nextInt();
+        int quantity = sc.nextInt();
         products.addProducts(quantity); //atualiza a qtd dentro do pbjeto product
 
         System.out.println();
