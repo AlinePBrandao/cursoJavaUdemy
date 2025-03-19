@@ -1,9 +1,11 @@
-package M7_OO2.EstoqueThisSobrecarga.application;
+package M7_OO2.Estoque.application;
 
-import M7_OO2.EstoqueThisSobrecarga.entities.Products;
+import M7_OO2.Estoque.entities.Products;
 
 import java.util.Locale;
 import java.util.Scanner;
+
+//SOBRECARGA, PALAVRA THIS, ENCAPSULAMENTO
 
 public class Program {
     public static void main(String[] args) {
@@ -17,13 +19,18 @@ public class Program {
         double price = sc.nextDouble();
         Products products = new Products(name, price);
 
+        products.setName("Computer"); //altera o nome do produto
+        System.out.println("Updated name: " + products.getName());//update do nome
+        products.setPrice(1200.00); //altera valor price
+        System.out.println("Updated price: " + products.getPrice()); //update do valor
+
         System.out.println();
         System.out.println("Product data: " + products.toString());
 
         System.out.println();
         System.out.print("Enter the number of products to be added in stock: ");
         int quantity = sc.nextInt();
-        products.addProducts(quantity); //atualiza a qtd dentro do pbjeto product
+        products.addProducts(quantity); //atualiza a qtd dentro do objeto product
 
         System.out.println();
         System.out.println("Updated data: " + products.toString());
