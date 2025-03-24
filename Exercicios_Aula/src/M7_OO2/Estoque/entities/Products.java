@@ -1,7 +1,7 @@
 package M7_OO2.Estoque.entities;
 
 public class Products {
-    private String name;
+    String name; //vai ser usado na classe Order
     private double price;
     private int quantity;
     //ENCAPSULAR ATRIBUTOS
@@ -49,6 +49,7 @@ public class Products {
     public void removeProducts(int quantity){ //saída estoque
         this.quantity -= quantity;
     }
+
     public String toString(){ //sobreposição da operação toString padrão, pode-se implementar a versão toString desejada
         return name + ", $ " + String.format("%.2f", price) + ", " + quantity + " units, Total: $ " + String.format("%.2f", totalValueInStock());
     }
