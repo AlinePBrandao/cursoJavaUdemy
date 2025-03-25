@@ -22,7 +22,7 @@ public class Account {
 
     //como os atributos são privados é necessário ter os métodos de acesso:
     //MÉTODOS DE ACESSO
-    public int getNumber() { //sem get porque num de conta não pode ser alterado
+    public int getNumber() { //sem set porque num de conta não pode ser alterado
         return number;
     }
 
@@ -34,7 +34,7 @@ public class Account {
         this.holder = holder;
     }
 
-    public double getBalance() { //sem get porque o saldo só pode ser alterado com depósito e saque
+    public double getBalance() { //sem set porque o saldo só pode ser alterado com depósito e saque
         return balance;
     }
 
