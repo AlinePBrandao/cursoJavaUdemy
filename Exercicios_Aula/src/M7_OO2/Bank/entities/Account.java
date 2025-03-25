@@ -5,12 +5,14 @@ public class Account {
     private String holder;
     private double balance;
 
+    //CONSTRUCTOR
     //é possível informar apenas nome e conta
     public Account(int number, String holder){
         this.number = number;
         this.holder = holder;
     }
 
+    //CONSTRUCTOR - SOBREPOSIÇÃO
     //também é possível informar nome, conta e depósito inicial
     public Account(int number, String holder, double initialDeposit) {
         this.number = number;
@@ -19,7 +21,7 @@ public class Account {
     }
 
     //como os atributos são privados é necessário ter os métodos de acesso:
-
+    //MÉTODOS DE ACESSO
     public int getNumber() { //sem get porque num de conta não pode ser alterado
         return number;
     }
@@ -36,15 +38,16 @@ public class Account {
         return balance;
     }
 
+    //DEPÓSITO (MÉTODO ENCAPSULADO PARA FACILITAR ALTERAÇÕES FUTURAS)
     public void deposit(double amount){
         balance += amount;
     }
-
+    //SAQUE (MÉTODO ENCAPSULADO PARA FACILITAR ALTERAÇÕES FUTURAS)
     public void withdraw(double amount){
         balance -= amount + 5.0; //saldo - saque + 5.0
     }
-
+    //RETORNO
     public String toString(){
-        return "Account " + number + ", Holder: " + holder + ", Balance: $" + balance;
+        return "Account " + number + ", Holder: " + holder + ", Balance: $" + String.format("%.2f", balance);
     }
 }
