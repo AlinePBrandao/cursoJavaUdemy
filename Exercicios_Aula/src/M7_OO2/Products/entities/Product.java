@@ -44,5 +44,4 @@ public class Product {
     public String toString(){
         return "Code: " + code + ", Name: " + name + ", Stock: " + quantity;
     }
-
 }
