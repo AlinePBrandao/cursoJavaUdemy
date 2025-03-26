@@ -34,7 +34,7 @@ public class Student {
     }
 
     public String getStatus(){
-            return finalGrade() >= 7.0 ? "Approved" : "Failed";
+            return finalGrade() >= 7.0 ? "Approved" : "Failed"; //condição ternária
     }
 
     public String toString(){
