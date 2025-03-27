@@ -22,7 +22,6 @@ public class Credit_Card {
         return cardNumb.matches("^\\d{4}-\\d{4}-\\d{4}-\\d{4}$");
     }
 
-
 //    public String getCardNumb() {
 //        return cardNumb;
 //    }
