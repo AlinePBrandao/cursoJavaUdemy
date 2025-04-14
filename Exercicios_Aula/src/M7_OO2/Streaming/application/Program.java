@@ -64,7 +64,6 @@ public class Program {
             }
         }
         while (option != 6);
-
         sc.close();
     }
 }

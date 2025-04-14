@@ -14,7 +14,7 @@ public class Program {
         System.out.print("Enter account number: ");
         int number = sc.nextInt();
         System.out.print("Enter account holder: ");
-        sc.nextLine();
+        sc.nextLine(); //consome a quebra de linha pendente no nextInt
         String holder = sc.nextLine();
         System.out.print("Is there an inicial deposit (y/n)? ");
         char answer = sc.next().charAt(0);
@@ -24,7 +24,7 @@ public class Program {
             double initialDeposit = sc.nextDouble();
             account = new Account(number, holder, initialDeposit); //instâcia com constructor de 3 argumentos
         }
-        //sobrecarga
+        //sobrecarga - caso não - number + holder
         else {
             account = new Account(number, holder);
         }
@@ -34,16 +34,16 @@ public class Program {
         System.out.println(account.toString());
 
         System.out.println();
-        System.out.println("Enter a deposit value: ");
-        double depositeValue = sc.nextDouble();
-        account.deposit(depositeValue); //realiza o depósito na conta
+        System.out.print("Enter a deposit value: ");
+        double depositValue = sc.nextDouble();
+        account.deposit(depositValue); //realiza o depósito na conta
         System.out.println("Updated account data: ");
         System.out.println(account);
 
         System.out.println();
-        System.out.println("Enter a withdraw value: ");
-        double withdraeValue = sc.nextDouble();
-        account.withdraw(withdraeValue); //realiza o saque na conta
+        System.out.print("Enter a withdraw value: ");
+        double withdrawValue = sc.nextDouble();
+        account.withdraw(withdrawValue); //realiza o saque na conta
         System.out.println("Updated account data: ");
         System.out.println(account);
 
