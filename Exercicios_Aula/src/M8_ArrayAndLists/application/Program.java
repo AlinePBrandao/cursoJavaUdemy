@@ -16,7 +16,7 @@ public class Program {
 
         System.out.println("Enter the Name and Price of the products: ");
         //corpo do vetor + instância
-        for (int i=0; i<n; i++){ //vetor
+        for (int i=0; i< vect.length; i++){ //vetor
             sc.nextLine(); //quebra de linha pendente
             String name = sc.nextLine();
             double price = sc.nextDouble();
@@ -24,10 +24,10 @@ public class Program {
         }
 
         double sum = 0;
-        for (int i=0; i<n; i++){
+        for (int i=0; i< vect.length; i++){ //vect.length = tamanho do vetor
             sum += vect[i].getPrice();
         }
-        double avg = sum / n;
+        double avg = sum / vect.length;
         System.out.printf("AVAREGE PRICE = %.2f %n", avg);
 
         sc.close();
