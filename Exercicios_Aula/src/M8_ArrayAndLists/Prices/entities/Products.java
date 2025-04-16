@@ -1,4 +1,4 @@
-package M8_ArrayAndLists.entities;
+package M8_ArrayAndLists.Prices.entities;
 
 public class Products {
     private String name;

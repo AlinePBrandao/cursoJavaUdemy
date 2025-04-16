@@ -1,6 +1,6 @@
-package M8_ArrayAndLists.application;
+package M8_ArrayAndLists.Prices.application;
 
-import M8_ArrayAndLists.entities.Products;
+import M8_ArrayAndLists.Prices.entities.Products;
 
 import java.util.Locale;
 import java.util.Scanner;
