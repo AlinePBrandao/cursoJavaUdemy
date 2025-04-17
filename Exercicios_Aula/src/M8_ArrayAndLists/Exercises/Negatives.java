@@ -2,7 +2,7 @@ package M8_ArrayAndLists.Exercises;
 
 import java.util.Scanner;
 
-public class Negativos {
+public class Negatives {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -23,11 +23,6 @@ public class Negativos {
                 System.out.println(vect[i]);
             }
         }
-
-
-
-
-
         sc.close();
     }
 }
