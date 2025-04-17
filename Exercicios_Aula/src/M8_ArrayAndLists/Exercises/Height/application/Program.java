@@ -46,9 +46,13 @@ public class Program {
         System.out.printf("Media height: %.2f %n", mediaHeight);
         System.out.printf("People under 16 years old: %.1f%%%n", percentUnder);
 
-        for (String name : under16Names){
-            System.out.println(name);
+        for (String name : under16Names){ //para cada name do tipo String contido na lista under16Names, faça
+            System.out.println(name); //imprime name
         }
+        /* OU
+        for (int i = 0; i < under16Names.size(); i++) {
+            System.out.println(under16Names.get(i));
+        } */
         sc.close();
     }
 }
