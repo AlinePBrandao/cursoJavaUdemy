@@ -41,10 +41,10 @@ public class Program {
         }
 
         double mediaHeight = sumHeight / n;
-        double percentUnder = ((double) under16 / n) * 100.0;
+        double percentUnder =  under16 * 100.0 / n;
 
         System.out.printf("Media height: %.2f %n", mediaHeight);
-        System.out.printf("People under 16 years old: %.1f%%%n", percentUnder);
+        System.out.printf("People under 16 years old: %.1f%% %n", percentUnder);
 
         for (String name : under16Names){ //para cada name do tipo String contido na lista under16Names, faça
             System.out.println(name); //imprime name
