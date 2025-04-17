@@ -25,7 +25,6 @@ public class EvenNumbers {
         }
 
         System.out.printf("\n\nNumber of Pairs: %d\n", evenNumbers);
-
         sc.close();
     }
 }
