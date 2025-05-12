@@ -18,7 +18,7 @@ public class HighestPosition {
         }
 
         double highestValue = 0;
-       int highestPosition = 0;
+        int highestPosition = 0;
         for (int i=1; i<vect.length; i++){
             if (vect[i] > highestValue){
                 highestValue = vect[i];
