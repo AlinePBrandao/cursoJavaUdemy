@@ -34,7 +34,6 @@ public class AveragePairs {
             average = (double) evenSum / nPairs;
             System.out.printf("Average of Even Numbers: %.1f%n", average);
         }
-
         sc.close();
     }
 }
