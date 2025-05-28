@@ -17,9 +17,9 @@ public class OlderPerson {
 
         for (int i=0; i<vect.length; i++){
             System.out.printf("Enter the %d person data: \n", i+1);
-            System.out.printf("Name: ");
+            System.out.print("Name: ");
             name[i] = sc.next();
-            System.out.printf("Age: ");
+            System.out.print("Age: ");
             age[i] = sc.nextInt();
         }
 
