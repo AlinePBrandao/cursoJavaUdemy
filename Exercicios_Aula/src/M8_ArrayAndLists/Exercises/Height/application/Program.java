@@ -11,7 +11,7 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("How many number of parsons are you going to enter? ");
+        System.out.print("How many people are you going to enter? ");
         int n = sc.nextInt();
         sc.nextLine();
         Person[] vect = new Person[n];
