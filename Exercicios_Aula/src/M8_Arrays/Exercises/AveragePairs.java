@@ -1,4 +1,4 @@
-package M8_ArrayAndLists.Exercises;
+package M8_Arrays.Exercises;
 
 import java.util.Locale;
 import java.util.Scanner;

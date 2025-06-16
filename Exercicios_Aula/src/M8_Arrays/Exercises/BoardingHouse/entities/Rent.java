@@ -1,4 +1,4 @@
-package M8_ArrayAndLists.Exercises.BoardingHouse.entities;
+package M8_Arrays.Exercises.BoardingHouse.entities;
 
 public class Rent {
     private String name;

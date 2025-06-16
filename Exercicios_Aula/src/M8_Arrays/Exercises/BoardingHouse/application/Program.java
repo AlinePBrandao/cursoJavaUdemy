@@ -1,6 +1,6 @@
-package M8_ArrayAndLists.Exercises.BoardingHouse.application;
+package M8_Arrays.Exercises.BoardingHouse.application;
 
-import M8_ArrayAndLists.Exercises.BoardingHouse.entities.Rent;
+import M8_Arrays.Exercises.BoardingHouse.entities.Rent;
 
 import java.text.ParseException;
 import java.util.Scanner;

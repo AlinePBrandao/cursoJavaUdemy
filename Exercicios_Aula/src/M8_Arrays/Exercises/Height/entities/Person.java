@@ -1,4 +1,4 @@
-package M8_ArrayAndLists.Exercises.Height.entities;
+package M8_Arrays.Exercises.Height.entities;
 
 public class Person {
     private String name;

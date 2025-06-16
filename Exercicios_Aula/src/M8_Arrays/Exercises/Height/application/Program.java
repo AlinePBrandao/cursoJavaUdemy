@@ -1,6 +1,6 @@
-package M8_ArrayAndLists.Exercises.Height.application;
+package M8_Arrays.Exercises.Height.application;
 
-import M8_ArrayAndLists.Exercises.Height.entities.Person;
+import M8_Arrays.Exercises.Height.entities.Person;
 
 import java.util.ArrayList;
 import java.util.Locale;
