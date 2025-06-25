@@ -23,6 +23,12 @@ public class Program {
             System.out.println( "Employee #" + (i+1) + ": ");
             System.out.print("ID: ");
             int id = sc.nextInt();
+            //para não ser possível repetir id
+            while (hasId(list, id)){
+                System.out.println("Id already taken! Try again");
+                id = sc.nextInt();
+            }
+
             System.out.print("Name: ");
             sc.nextLine(); //consume a quebra de linha
             String name = sc.nextLine();
@@ -38,31 +44,28 @@ public class Program {
         System.out.print("Enter the employee id that will have salary increase: ");
         int idSalary = sc.nextInt();
 
-        Integer pos = position(list, idSalary); //procurando a posição do idSalary na lista
-        if (pos == null){
+        EmployeeList emp = list.stream().filter(x -> x.getId() == idSalary).findFirst().orElse(null); //função lambda
+        //filtra somente funcionario x tal que x.getId = idSalary ou seja somente funcionários id = idSalary e selct o 1°
+        if (emp == null){
             System.out.println("This id doesn't exist!");
         }
         else {
             System.out.print("Enter the percentage: ");
             double percent = sc.nextDouble();
-            list.get(pos).increaseSalary(percent);
+            emp.increaseSalary(percent);
         }
 
         System.out.println();
         System.out.println("List of employees: ");
-        for (EmployeeList emp : list){
-            System.out.println(emp);
+        for (EmployeeList e : list){
+            System.out.println(e);
         }
 
         sc.close();
     }
-    //função auxiliar para consultar id - dá a posição na lista
-    public static Integer position(List<EmployeeList> list, int id){
-        for (int i=0; i< list.size(); i++){
-            if (list.get(i).getId() == id){  //get pega o elemento na posição = se o elemento na posição i id = id
-                return i;
-            }
-        }
-        return null;
+    //função auxiliar para consultar id com expressão lambda
+    public static boolean hasId(List<EmployeeList> list, int id){
+        EmployeeList emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        return  emp != null;
     }
 }
