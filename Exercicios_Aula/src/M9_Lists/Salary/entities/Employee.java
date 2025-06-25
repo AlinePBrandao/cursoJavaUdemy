@@ -20,4 +20,17 @@ public class Employee {
         return salary;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public void increaseSalary(double percentage){
+        salary += + salary * percentage / 100.0;
+    }
 }

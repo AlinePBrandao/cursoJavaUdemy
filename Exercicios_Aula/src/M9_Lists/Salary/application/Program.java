@@ -27,6 +27,16 @@ public class Program {
             vect[i] = new Employee(id, name, salary);
         }
 
+        for (int i=0; i< vect.length; i++) {
+            System.out.print("Enter the employee id that will have salary increase: ");
+            int id = sc.nextInt();
+            System.out.print("Enter the percentage: ");
+
+        }
+        if (){
+            System.out.println("This id doesn't exist!");
+        }
+
 
 
         sc.close();
