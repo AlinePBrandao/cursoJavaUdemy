@@ -1,4 +1,4 @@
-package M9_Lists.Salary.entities;
+package M9_Lists.List.Salary.entities;
 
 public class EmployeeList {
     private int id;

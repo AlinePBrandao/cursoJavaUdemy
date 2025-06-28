@@ -1,6 +1,6 @@
-package M9_Lists.Salary.application;
+package M9_Lists.List.Salary.application;
 
-import M9_Lists.Salary.entities.EmployeeList;
+import M9_Lists.List.Salary.entities.EmployeeList;
 
 import java.util.ArrayList;
 import java.util.List;
