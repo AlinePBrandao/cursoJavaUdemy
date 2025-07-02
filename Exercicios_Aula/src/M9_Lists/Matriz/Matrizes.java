@@ -8,6 +8,7 @@ public class Matrizes {
 
         int n = sc.nextInt();
         int[][] mat = new int[n][n]; //arranjo bidiecional - arranjo dado pela quantidade de colchetes
+        //[n-linhas][n-colunas]
 
         for(int i=0; i< mat.length; i++){ //for para percorrer as linhas
             for (int j = 0; j <mat[i].length; j++){ //for para percorrer as colunas
