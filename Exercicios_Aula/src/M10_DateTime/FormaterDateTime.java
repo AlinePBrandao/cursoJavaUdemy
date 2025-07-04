@@ -15,5 +15,6 @@ public class FormaterDateTime {
 
         System.out.println("d01 = " + d01.format(fmt1)); //respeita formato estabelecido
         System.out.println("d01 = " + fmt1.format(d01)); //imprimindo a partir dele
+        System.out.println("d01 = " + d01.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))); //Instanciação direta, sem reaproveitamento
     }
 }
