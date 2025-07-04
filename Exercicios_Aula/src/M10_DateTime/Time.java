@@ -24,6 +24,11 @@ public class Time {
         //Texto formato customizado - data-hora
         LocalDate d08 = LocalDate.parse("04/07/2025", fmt1); //passa a data p/ formato ISO
         LocalDateTime d09 = LocalDateTime.parse("04/07/2025 01:30", fmt2); //data e hora formato ISO
+        //LocalDate d08 = LocalDate.parse("04/07/2025", DateTimeFormatter.ofPattern("dd/MM/yyyy"); //alternativa direta sem declaração de variável
+
+        //instancia com dados isolados
+        LocalDate d10 = LocalDate.of(2025, 7, 04); //dados isolados para padrão ISO
+        LocalDateTime d11 = LocalDateTime.of(2025, 7, 04, 1, 30);
 
         System.out.println("d01 = " + d01.toString()); //o toString por padrão gera o formato ISO
         System.out.println("d02 = " + d02.toString());
@@ -34,5 +39,7 @@ public class Time {
         System.out.println("d07 = " + d07.toString());
         System.out.println("d08 = " + d08.toString());
         System.out.println("d09 = " + d09.toString());
+        System.out.println("d10 = " + d10.toString());
+        System.out.println("d11 = " + d11.toString());
     }
 }
