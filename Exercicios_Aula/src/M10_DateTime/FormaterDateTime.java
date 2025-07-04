@@ -17,10 +17,13 @@ public class FormaterDateTime {
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault()); //estabelece zona + fuso do computador
+        DateTimeFormatter fmt4 = DateTimeFormatter.ISO_DATE_TIME;
 
         System.out.println("d01 = " + d01.format(fmt1)); //respeita formato estabelecido
         System.out.println("d02 = " + d02.format(fmt2)); //respeita formato com hora
         System.out.println("d03 = " + fmt3.format(d03)); //considerando horario sistema local a partir do fuso estabelecido (nesse caso -3:00)
+        //Instant d03 não tem método format, então ele precisa ser chamado a partir do fmt3
+        System.out.println("d02 = " + d02.format(fmt4)); //formato ISO
 
 
 
