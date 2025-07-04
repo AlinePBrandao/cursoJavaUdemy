@@ -11,9 +11,9 @@ public class FormaterDateTime {
         //Converter data-hora p/ texto
         LocalDate d01 = LocalDate.parse("2025-07-04");
 
-
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
         System.out.println("d01 = " + d01.format(fmt1)); //respeita formato estabelecido
+        System.out.println("d01 = " + fmt1.format(d01)); //imprimindo a partir dele
     }
 }
