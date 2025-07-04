@@ -9,6 +9,7 @@ public class Time {
     public static void main(String[] args) {
 
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy"); //Padrão estabelecido de data para d08
+        DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"); //Padrão estabelecido de data para d08
 
         LocalDate d01 = LocalDate.now();
         LocalDateTime d02 = LocalDateTime.now();
@@ -22,7 +23,7 @@ public class Time {
 
         //Texto formato customizado - data-hora
         LocalDate d08 = LocalDate.parse("04/07/2025", fmt1); //passa a data p/ formato ISO
-
+        LocalDateTime d09 = LocalDateTime.parse("04/07/2025 01:30", fmt2); //data e hora formato ISO
 
         System.out.println("d01 = " + d01.toString()); //o toString por padrão gera o formato ISO
         System.out.println("d02 = " + d02.toString());
@@ -32,5 +33,6 @@ public class Time {
         System.out.println("d06 = " + d06.toString());
         System.out.println("d07 = " + d07.toString());
         System.out.println("d08 = " + d08.toString());
+        System.out.println("d09 = " + d09.toString());
     }
 }
