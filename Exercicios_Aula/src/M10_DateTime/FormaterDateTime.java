@@ -18,13 +18,15 @@ public class FormaterDateTime {
         DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         DateTimeFormatter fmt3 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm").withZone(ZoneId.systemDefault()); //estabelece zona + fuso do computador
         DateTimeFormatter fmt4 = DateTimeFormatter.ISO_DATE_TIME;
+        DateTimeFormatter fmt5 = DateTimeFormatter.ISO_INSTANT;
 
         System.out.println("d01 = " + d01.format(fmt1)); //respeita formato estabelecido
         System.out.println("d02 = " + d02.format(fmt2)); //respeita formato com hora
         System.out.println("d03 = " + fmt3.format(d03)); //considerando horario sistema local a partir do fuso estabelecido (nesse caso -3:00)
         //Instant d03 não tem método format, então ele precisa ser chamado a partir do fmt3
         System.out.println("d02 = " + d02.format(fmt4)); //formato ISO
-
+        System.out.println("d03 = " + fmt5.format(d03)); //se não especificado usa fuso UTC
+        System.out.println("d03 = " + d03.toString()); //imprime formato ISO por padrão
 
 
         //System.out.println("d01 = " + fmt1.format(d01)); //imprimindo a partir dele
