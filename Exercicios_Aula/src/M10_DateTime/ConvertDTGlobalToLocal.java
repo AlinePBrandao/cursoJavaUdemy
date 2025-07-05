@@ -23,7 +23,13 @@ public class ConvertDTGlobalToLocal {
         System.out.println("r3 = " + r3);
         System.out.println("r4 = " + r4);
 
+        //Obter dados de uma data-hora local
+        System.out.println("d01 dia = " + d01.getDayOfMonth()); //dia
+        System.out.println("d01 mês = " + d01.getMonthValue()); //mes
+        System.out.println("d01 ano = " + d01.getYear()); //ano
 
+        System.out.println("d02 hora = " + d02.getHour()); //hora
+        System.out.println("d02 minuto = " + d02.getMinute()); //minuto
 
         //Retorna coleção com nomes dos fusos customizados
 //        for (String s : ZoneId.getAvailableZoneIds()){
