@@ -14,10 +14,19 @@ public class CalculateTimeAndDuration {
         // Acrescentar ou Subtrair Tempo
         LocalDate pastWeekLocalDate = d01.minusDays(7); //Subtrai dias
         LocalDate nextWeekLocalDate = d01.plusDays(7); //Acrescenta dias
+        LocalDate nextYearLocalDate = d01.plusYears(7); //Acrescenta anos
 
         System.out.println("PastWeekLocalDate = " + pastWeekLocalDate);
         System.out.println("NextWeekLocalDate = " + nextWeekLocalDate);
+        System.out.println("NextYearLocalDate = " + nextYearLocalDate);
 
+        LocalDateTime pastWeekLocalDateTime = d02.minusDays(7); //Subtrai dias
+        LocalDateTime nextWeekLocalDateTime = d02.plusDays(7); //Acrescenta dias
+        LocalDateTime nextHourLocalDateTime = d02.plusHours(10); //Acrescenta dias
+
+        System.out.println("PastWeekLocalDateTime = " + pastWeekLocalDateTime);
+        System.out.println("NextWeekLocalDateTime = " + nextWeekLocalDateTime);
+        System.out.println("NextHourLocalDateTime = " + nextHourLocalDateTime);
 
         //Duração
 
