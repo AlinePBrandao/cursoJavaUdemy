@@ -1,5 +1,6 @@
 package M10_DateTime;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -38,6 +39,17 @@ public class CalculateTimeAndDuration {
         System.out.println("NextHourInstant = " + nextHourInstant);
 
         //Duração
+        //Duration t1 = Duration.between(pastWeekLocalDate.atTime(0, 0), d01.atTime(0, 0));
+        // duração entre 2 data-hora com conversão para local devido aos segundos (não suporta)
 
+        Duration t1 = Duration.between(pastWeekLocalDate.atStartOfDay(), d01.atStartOfDay()); //duração entre 2 data-hora com conversão para local a partir de 00:00
+        Duration t2 = Duration.between(pastWeekLocalDateTime, d02); //duração entre 2 data-hora;
+        Duration t3 = Duration.between(pastWeekInstant, d03); //data menor a data-hora maior
+        Duration t4 = Duration.between(d03 , pastWeekInstant ); //data-hora maior a data menor
+
+        System.out.println("t1 dias = " + t1.toDays()); //duração dias
+        System.out.println("t2 dias = " + t2.toDays()); //duração dias
+        System.out.println("t3 dias = " + t3.toDays()); //duração dias
+        System.out.println("t4 dias = " + t4.toDays()); //duração dias
     }
 }
