@@ -19,5 +19,10 @@ public class CalendarManipulate {
 
         System.out.println(sdf.format(d));
 
+        int minutes = cal.get(Calendar.MINUTE); //contabiliza minutos
+        int month = 1 + cal.get(Calendar.MONTH); //mes começa em 0, por isso acrscentar 1
+
+        System.out.println("Minutes: " + minutes);
+        System.out.println("Month: " + month);
     }
 }
