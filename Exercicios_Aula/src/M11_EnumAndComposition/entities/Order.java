@@ -46,10 +46,10 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order{" +
-                "id=" + id +
-                ", moment=" + moment +
-                ", status=" + status +
-                '}';
+        return "Order{ " +
+                "id= " + id +
+                ", moment= " + moment +
+                ", status= " + status +
+                " }";
     }
 }
