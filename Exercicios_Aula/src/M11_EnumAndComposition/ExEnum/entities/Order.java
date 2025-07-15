@@ -1,6 +1,6 @@
-package M11_EnumAndComposition.entities;
+package M11_EnumAndComposition.ExEnum.entities;
 
-import M11_EnumAndComposition.enums.OrderStatus;
+import M11_EnumAndComposition.ExEnum.entities.enums.OrderStatus;
 
 import java.util.Date;
 

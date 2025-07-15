@@ -1,4 +1,4 @@
-package M11_EnumAndComposition.enums;
+package M11_EnumAndComposition.ExEnum.entities.enums;
 
 public enum OrderStatus {
 
