@@ -7,14 +7,14 @@ import java.util.Calendar;
 import java.util.List;
 
 public class Worker {
-    private double name;
+    private String name;
     private WorkerLevel level;
     private double baseSalary;
 
     private  Department department;
     private List<HourContract> contracts = new ArrayList<>(); //Worker tem vários contratos, sendo assim, List
 
-    public Worker (double name, WorkerLevel level, double baseSalary, Department department){
+    public Worker (String name, WorkerLevel level, double baseSalary, Department department){
         this.name = name;
         this.level = level;
         this.baseSalary = baseSalary;
@@ -52,11 +52,11 @@ public class Worker {
         this.level = level;
     }
 
-    public double getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(double name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -73,8 +73,8 @@ public class Worker {
         double sum = baseSalary;
         Calendar cal = Calendar.getInstance();
         //percorrer contratos para selecionar os do mês referido
-        for (HourContract c : contracts){
-            cal.setTime(c.getDate());
+        for (HourContract c : contracts){ //for it
+            cal.setTime(c.getDate()); //setar no calendário a data. Data do contrato e define como sendo a data do calendário
             int c_year = cal.get(Calendar.YEAR);
             int c_month = 1 + cal.get(Calendar.MONTH); //mês do calendar começa em 0, add +1
             if (year == c_year && month == c_month){
