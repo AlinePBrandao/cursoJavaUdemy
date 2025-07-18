@@ -80,7 +80,7 @@ public class Post {
         sb.append(content + "\n");
         sb.append("Comments: \n");
         for (Comment c : comments) {
-            sb.append(c.getText()); //acrescenta comentários no StringBuilder
+            sb.append(c.getText() + "\n"); //acrescenta comentários no StringBuilder
         }
         return sb.toString();
     }
