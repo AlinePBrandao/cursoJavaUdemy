@@ -55,8 +55,15 @@ public class Post {
     public List<Comment> getComments() {
         return comments;
     }
+    //list Comments não pode ter set (não pode ser trocada por putro list)
 
-    public void setComments(List<Comment> comments) {
-        this.comments = comments;
+    public void addComment(Comment comment /*comment é o argumento*/){
+        comments.add(comment);
     }
+
+    public void removeComment(Comment comment){
+        comments.remove(comment);
+    }
+
+
 }
