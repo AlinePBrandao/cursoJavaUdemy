@@ -18,9 +18,20 @@ public class Program {
                 "Traveling to New Zealand",
                 "I'm going to visit this wonderful country!",
                 12);
-
         p1.addComment(c1);
         p1.addComment(c2);
+
+        Comment c3 = new Comment("Good night");
+        Comment c4 = new Comment("May the Force be with you");
+        Post p2 = new Post(
+                sdf.parse("28/07/2025 23:14:19"),
+                "Good night guys",
+                "See you tomorrow",
+                10);
+        p2.addComment(c3);
+        p2.addComment(c4);
+
         System.out.println(p1);
+        System.out.println(p2);
     }
 }
