@@ -1,10 +1,15 @@
 package M11_EnumAndComposition.StringBuilder.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 public class Post {
+
+    //constante declarada para acesso no método StringBuilder
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+    //private static para que não se tenha uma cópia do objeto para cada post da aplicação, e sim apenas uma cópia para a aplicação toda
 
     private Date moment;
     private String title;
@@ -65,5 +70,19 @@ public class Post {
         comments.remove(comment);
     }
 
+    //StringBuilder - ideal p/ montar um String muito grande a partir de vários Strings menores.
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(title + "\n"); //append acrescentar no final
+        sb.append(likes);
+        sb.append(" likes - ");
+        sb.append(sdf.format(moment) + "\n");
+        sb.append(content + "\n");
+        sb.append("Comments: \n");
+        for (Comment c : comments) {
+            sb.append(c.getText()); //acrescenta comentários no StringBuilder
+        }
+        return sb.toString();
+    }
 
 }

@@ -18,5 +18,9 @@ public class Program {
                 "Traveling to New Zealand",
                 "I'm going to visit this wonderful country!",
                 12);
+
+        p1.addComment(c1);
+        p1.addComment(c2);
+        System.out.println(p1);
     }
 }
