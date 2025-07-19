@@ -84,5 +84,4 @@ public class Post {
         }
         return sb.toString();
     }
-
 }
