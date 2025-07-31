@@ -7,9 +7,9 @@ import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
         System.out.println("Enter cliente data:");
         System.out.print("Name: ");

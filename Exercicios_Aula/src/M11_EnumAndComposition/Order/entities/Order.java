@@ -46,9 +46,7 @@ public class Order {
         this.client = client;
     }
 
-    public List<OrderItem> getItems() {
-        return items;
-    }//sem set- List não pode ser trocada
+    //List<OrderItem> sem get e set- List não pode ser trocada
 
     public void addItem(OrderItem item){
         items.add(item); //add item na list
@@ -58,6 +56,10 @@ public class Order {
     }
 
     public Double total(){
-
+        double sum = 0.0;
+        for (OrderItem it : items){
+            sum += it.subTotal();
+        }
+        return sum;
     }
 }
