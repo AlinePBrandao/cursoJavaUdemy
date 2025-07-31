@@ -57,7 +57,7 @@ public class Order {
         items.remove(item); //remove item na list
     }
 
-//    public Double total(){
-//        return ;
-//    }
+    public Double total(){
+
+    }
 }
