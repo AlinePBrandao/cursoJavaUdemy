@@ -2,6 +2,7 @@ package M11_EnumAndComposition.Order.entities;
 
 import M11_EnumAndComposition.Order.entities.enums.OrderStatus;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -12,6 +13,41 @@ public class Order {
 
     //Associações - Composição de Objetos
     private Client client; //Order possui 1 Client
-    private List<OrderItem> items; //Order possui vários Items
+    private List<OrderItem> items = new ArrayList<>(); //Order possui vários Items
+    //List instanciada- não entra no constructor
+
+    private Order(Date moment, OrderStatus orderStatus, Client client){
+        this.moment = moment;
+        this.orderStatus = orderStatus;
+        this.client = client;
+    }
+
+    public Date getMoment() {
+        return moment;
+    }
+
+    public void setMoment(Date moment) {
+        this.moment = moment;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
+    }
+
+    public List<OrderItem> getItems() {
+        return items;
+    }//sem set- List não pode ser trocada
 
 }
