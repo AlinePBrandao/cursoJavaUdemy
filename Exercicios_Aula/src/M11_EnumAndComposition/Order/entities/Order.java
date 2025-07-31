@@ -50,4 +50,14 @@ public class Order {
         return items;
     }//sem set- List não pode ser trocada
 
+    public void addItem(OrderItem item){
+        items.add(item); //add item na list
+    }
+    public void removeItem(OrderItem item){
+        items.remove(item); //remove item na list
+    }
+
+//    public Double total(){
+//        return ;
+//    }
 }
