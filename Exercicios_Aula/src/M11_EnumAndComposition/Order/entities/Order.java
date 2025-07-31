@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import static M11_EnumAndComposition.Order.entities.Client.sdf;
+
 public class Order {
 
     private Date moment;
@@ -58,8 +60,24 @@ public class Order {
     public Double total(){
         double sum = 0.0;
         for (OrderItem it : items){
-            sum += it.subTotal();
+            sum += it.subTotal(); //delega calculo p item subtotsl
         }
         return sum;
+    }
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Order moment: ");
+        sb.append(sdf.format(moment) + "\n");
+        sb.append("Order status: ");
+        sb.append(orderStatus + "\n");
+        sb.append("Client: ");
+        sb.append(client + "\n");
+        sb.append("Order items \n");
+        for (OrderItem item : items){
+            sb.append(item + "\n");
+        }
+        sb.append("Total price: $");
+        sb.append(String.format("%.2f", total()));
+        return sb.toString();
     }
 }

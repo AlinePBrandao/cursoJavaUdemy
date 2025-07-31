@@ -15,7 +15,7 @@ public class Program {
         System.out.print("Name: ");
         String name = sc.nextLine();
         System.out.print("Birth date (DD/MM/YYYY): ");
-        Date moment
+        Date
 
 
         sc.close();
