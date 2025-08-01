@@ -2,13 +2,14 @@ package M11_EnumAndComposition.Order.entities;
 
 import M11_EnumAndComposition.Order.entities.enums.OrderStatus;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import static M11_EnumAndComposition.Order.entities.Client.sdf;
-
 public class Order {
+
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     private Date moment;
     private OrderStatus orderStatus;
@@ -18,7 +19,7 @@ public class Order {
     private List<OrderItem> items = new ArrayList<>(); //Order possui vários Items
     //List instanciada- não entra no constructor
 
-    private Order(Date moment, OrderStatus orderStatus, Client client){
+    public Order(Date moment, OrderStatus orderStatus, Client client){
         this.moment = moment;
         this.orderStatus = orderStatus;
         this.client = client;
