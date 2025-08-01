@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Order {
 
-    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
     private Date moment;
     private OrderStatus orderStatus;
@@ -67,6 +67,7 @@ public class Order {
     }
     public String toString(){
         StringBuilder sb = new StringBuilder();
+        sb.append("ORDER SUMMARY: \n");
         sb.append("Order moment: ");
         sb.append(sdf.format(moment) + "\n");
         sb.append("Order status: ");
