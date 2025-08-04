@@ -37,7 +37,7 @@ public class Program {
         }
         System.out.print("Enter status code (1 to "+ statusValues.length + "): ");
         int statusIndex = sc.nextInt();
-        OrderStatus status = statusValues[statusIndex - 1];
+        OrderStatus status = statusValues[statusIndex - 1]; //Subtrai 1- o array começa em 0 mas menu começa em 1
 
         Order order = new Order(new Date(), status, client); //data com horaario do sistema
         System.out.print("How many items to this order? ");
