@@ -29,8 +29,15 @@ public class Program {
         Client client = new Client(name, email, birthDate);
 
         System.out.println("Enter order data: ");
-        System.out.print("Status: ");
-        OrderStatus status = OrderStatus.valueOf(sc.next()); //converte strinng p valor correspondente d status
+        //add menu numerado
+        System.out.println("Select order status: ");
+        OrderStatus[] statusValues = OrderStatus.values(); //converte strinng p valor correspondente d status
+        for (int i=0; i<statusValues.length; i++){
+            System.out.println((i + 1) + " - " + statusValues[i]);
+        }
+        System.out.print("Enter status code (1 to "+ statusValues.length + "): ");
+        int statusIndex = sc.nextInt();
+        OrderStatus status = statusValues[statusIndex - 1];
 
         Order order = new Order(new Date(), status, client); //data com horaario do sistema
         System.out.print("How many items to this order? ");
