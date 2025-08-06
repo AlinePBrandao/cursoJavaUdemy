@@ -34,4 +34,10 @@ public class Account {
 
    //sem set porque não se pode mudar o saldo da conta livremente
 
+    public void withdraw (double amount){
+        balance -= amount;
+    }
+    public void deposit (double amount){
+        balance += amount;
+    }
 }
