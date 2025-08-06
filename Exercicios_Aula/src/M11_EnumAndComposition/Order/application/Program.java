@@ -31,7 +31,7 @@ public class Program {
         System.out.println("Enter order data: ");
         //add menu numerado
         System.out.println("Select order status: ");
-        OrderStatus[] statusValues = OrderStatus.values(); //converte strinng p valor correspondente d status
+        OrderStatus[] statusValues = OrderStatus.values();
         for (int i=0; i<statusValues.length; i++){
             System.out.println((i + 1) + " - " + statusValues[i]);
         }
