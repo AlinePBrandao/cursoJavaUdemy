@@ -20,5 +20,20 @@ public class Program {
         BusinessAccount acc4 = (BusinessAccount)acc2; //necessário fazer casting, pois não se pode converter de Account para BusinessAccount
         //acc2 é do tipo Account mesmo sendo instanciada como BusinessAccount
         acc4.loan(100.0);
+
+        //BusinessAccount acc5 = (BusinessAccount)acc3; //Não é permitido porque acc3 é do tipo SavingAccount, é uma Account mas não uma Business. Não pode ser convertido
+
+        //EVITANDO ERRO NO DOWNCASTING
+        if (acc3 instanceof BusinessAccount){ //se obj acc3 for instancia de BusinessAccount
+            BusinessAccount acc5 = (BusinessAccount)acc3; //casting
+            acc5.loan(200.0); //empréstimo
+            System.out.println("Loan!");
+        }
+
+        if (acc3 instanceof SavingsAccount){
+            SavingsAccount acc5 = (SavingsAccount)acc3;
+            acc5.updateBalance();
+            System.out.println("Update!");
+        }
     }
 }
