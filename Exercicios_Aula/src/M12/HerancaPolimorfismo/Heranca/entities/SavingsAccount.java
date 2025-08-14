@@ -20,4 +20,10 @@ public class SavingsAccount extends Account {
     public void updateBalance(){
         balance += balance * interestRate; //balanço * taxa de juros
     }
+
+    //Sobrescrita do método da superclasse na subclasse
+    @Override
+    public void withdraw(double amount) {
+        balance -= amount;
+    }
 }

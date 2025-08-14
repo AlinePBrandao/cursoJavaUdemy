@@ -35,5 +35,10 @@ public class Program {
             acc5.updateBalance();
             System.out.println("Update!");
         }
+
+        //Sobrescrita método withdraw
+        Account acc6 = new Account(1005, "Lina", 1000.0);
+        acc6.withdraw(200.0);
+        System.out.println(acc6.getBalance());
     }
 }
