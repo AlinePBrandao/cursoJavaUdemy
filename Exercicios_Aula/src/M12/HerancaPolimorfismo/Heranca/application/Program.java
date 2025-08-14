@@ -38,11 +38,15 @@ public class Program {
 
         //Sobrescrita método withdraw
         Account acc6 = new Account(1005, "Lina", 1000.0);
-        acc6.withdraw(200.0);
+        acc6.withdraw(200.0);//saca 200, desconta taxa de 5 da lógica de Account
         System.out.println(acc6.getBalance());
 
         Account acc7 = new SavingsAccount(1006, "Rafael", 1000.0, 0.01);
-        acc7.withdraw(200.0);
+        acc7.withdraw(200.0); //saca 200, sem desconto de taxa seguindo lógica de SavingAccount
         System.out.println(acc7.getBalance());
+
+        Account acc8 = new BusinessAccount(1007, "Bruno", 1000.0, 500.0);
+        acc8.withdraw(200.0); //saca 200, desconta taxa de 5 da lógica de Account e depois desconta +2 da lógica de Business
+        System.out.println(acc8.getBalance());
     }
 }

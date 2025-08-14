@@ -25,4 +25,11 @@ public class BusinessAccount extends Account{
             //deposit(amount); //dinheiro entra na conta por meio de um depósito
         }
     }
+
+    //sobreposição com palavra super
+    @Override
+    public void withdraw(double amount) {
+        super.withdraw(amount);
+        balance -= 2.0;
+    }
 }
