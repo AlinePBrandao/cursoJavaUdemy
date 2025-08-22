@@ -12,10 +12,12 @@ public class Employee {
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
@@ -24,14 +26,17 @@ public class Employee {
     }
 
     public void setHour(Integer hour) {
+
         this.hour = hour;
     }
 
     public Double getValuePerHour() {
+
         return valuePerHour;
     }
 
     public void setValuePerHour(Double valuePerHour) {
+
         this.valuePerHour = valuePerHour;
     }
 
