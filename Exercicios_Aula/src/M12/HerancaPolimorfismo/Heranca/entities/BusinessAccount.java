@@ -20,7 +20,7 @@ public class BusinessAccount extends Account{
     }
 
     public void loan(double amount){
-        if (amount <= loanLimit){ //dinheiro só pode sem emprestado se a quantia for menor que o limite de empréstimo
+        if (amount <= loanLimit){ //dinheiro só pode ser emprestado se a quantia for menor que o limite de empréstimo
            balance += amount - 10.0;
             //deposit(amount); //dinheiro entra na conta por meio de um depósito
         }
