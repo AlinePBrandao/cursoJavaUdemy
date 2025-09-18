@@ -1,6 +1,7 @@
 package M12.HerancaPolimorfismo.PaymentEmployees.application;
 
 import M12.HerancaPolimorfismo.PaymentEmployees.entities.Employee;
+import M12.HerancaPolimorfismo.PaymentEmployees.entities.OutSourceEmployee;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,12 +27,18 @@ public class Program {
             String name = sc.nextLine();
             System.out.print("Hours: ");
             int hours = sc.nextInt();
-            System.out.print("Valua per hour: ");
+            System.out.print("Value per hour: ");
             double valuePerHour = sc.nextDouble();
 
             if (ch == 'y'){
                 System.out.print("Additional charge: ");
                 double additionalCharge = sc.nextDouble();
+                Employee emp = new OutSourceEmployee(name, hours, valuePerHour, additionalCharge); //instancia Employee
+                list.add(emp);
+            }
+            else {
+                Employee emp = new Employee(name, hours, valuePerHour);
+                list.add(emp);
             }
         }
 
