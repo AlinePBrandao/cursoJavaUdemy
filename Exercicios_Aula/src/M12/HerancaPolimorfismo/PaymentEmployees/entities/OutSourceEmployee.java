@@ -20,5 +20,6 @@ public class OutSourceEmployee extends Employee {
     @Override
     public double payment(){
         return super.payment() + additionalCharge * 1.1;
+        //metodo payment criado em Employee
     }
 }

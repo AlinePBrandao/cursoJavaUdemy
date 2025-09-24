@@ -19,6 +19,7 @@ public class Program {
         int n = sc.nextInt();
 
         for (int i=1; i<=n; i++){
+            System.out.println();
             System.out.println("Employee #" + i + " data");
             System.out.print("Outsourced (y/n)? ");
             char ch = sc.next().charAt(0);
@@ -33,13 +34,22 @@ public class Program {
             if (ch == 'y'){
                 System.out.print("Additional charge: ");
                 double additionalCharge = sc.nextDouble();
-                Employee emp = new OutSourceEmployee(name, hours, valuePerHour, additionalCharge); //instancia Employee
-                list.add(emp);
+                // Employee emp = new OutSourceEmployee(name, hours, valuePerHour, additionalCharge); //instancia Employee
+                //list.add(emp);
+                //outra forma de fazer:
+                list.add(new OutSourceEmployee(name, hours, valuePerHour, additionalCharge));
             }
             else {
-                Employee emp = new Employee(name, hours, valuePerHour);
-                list.add(emp);
+                //Igualmente como acima é possível encurtar esse metodo
+//                Employee emp = new Employee(name, hours, valuePerHour);
+//                list.add(emp);
+                list.add(new Employee(name, hours, valuePerHour));
             }
+        }
+        System.out.println();
+        System.out.println("PAYMENTS: ");
+        for (Employee emp : list){
+            System.out.println(emp.getName() + " - $ " + String.format("%.2f", emp.payment()));
         }
 
         sc.close();
