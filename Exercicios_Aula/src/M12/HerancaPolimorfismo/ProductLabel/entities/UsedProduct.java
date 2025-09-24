@@ -2,7 +2,6 @@ package M12.HerancaPolimorfismo.ProductLabel.entities;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class UsedProduct extends Product{
 
@@ -26,6 +25,5 @@ public class UsedProduct extends Product{
         return getName() + " (used) $ " + String.format("%.2f", getPrice()) + "(Manufacture date: " +
                 manufactureDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) + ")";
     }
-
 
 }
