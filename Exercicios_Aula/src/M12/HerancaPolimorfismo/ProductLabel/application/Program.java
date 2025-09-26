@@ -1,5 +1,10 @@
 package M12.HerancaPolimorfismo.ProductLabel.application;
 
+import M12.HerancaPolimorfismo.ProductLabel.entities.ImportedProduct;
+import M12.HerancaPolimorfismo.ProductLabel.entities.Product;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -8,6 +13,7 @@ public class Program {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+        List<Product> list = new ArrayList<>();
 
         System.out.print("Enter the number of products: ");
         int n = sc.nextInt();
@@ -19,6 +25,22 @@ public class Program {
             System.out.print("Name: ");
             sc.nextLine();
             String name = sc.nextLine();
+            System.out.print("Price: ");
+            double price = sc.nextDouble();
+
+            if (ch == 'i'){
+                System.out.print("Customs fee: ");
+                double customsFee = sc.nextDouble();
+                list.add(new ImportedProduct(name, price, customsFee));
+            } else if (ch == 'u') {
+                System.out.print("Manufacture date (DD/MM/YYYY): ");
+                // TODO: descobrir como solicitar tempo, variavel necessaria e aplicação
+            }
+            else {
+                // TODO: adicionar na list produto comum
+            }
+            //TODO: finalizar com o retorno de Price Tags
+
 
         }
 
