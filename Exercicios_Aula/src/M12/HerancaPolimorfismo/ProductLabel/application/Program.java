@@ -35,11 +35,14 @@ public class Program {
                 System.out.print("Customs fee: ");
                 double customsFee = sc.nextDouble();
                 list.add(new ImportedProduct(name, price, customsFee));
-            } else if (ch == 'u') {
+            }
+
+            else if (ch == 'u') {
                 System.out.print("Manufacture date (DD/MM/YYYY): ");
                 LocalDate date = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
                 list.add(new UsedProduct(name, price,date));
             }
+
             else {
                 list.add(new Product(name, price));
 
@@ -49,7 +52,7 @@ public class Program {
         System.out.println();
         System.out.println("PRICE TAGS: ");
         for (Product product : list){
-            System.out.println(product.getName() + "$ " + String.format("%.2f", product.getPrice()));
+            System.out.println(product.priceTag());
         }
 
         sc.close();

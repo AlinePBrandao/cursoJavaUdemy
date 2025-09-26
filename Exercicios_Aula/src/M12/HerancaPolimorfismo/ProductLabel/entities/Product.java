@@ -29,7 +29,7 @@ public class Product {
     // TODO: String priceTag name + price
 
     public String priceTag(){
-        return name + "$ " + String.format("%.2f", price);
+        return name + " $ " + String.format("%.2f", price);
     }
 
 }
