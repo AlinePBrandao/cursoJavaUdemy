@@ -37,13 +37,16 @@ public class Program {
                 // TODO: descobrir como solicitar tempo, variavel necessaria e aplicação
             }
             else {
-                // TODO: adicionar na list produto comum
+                list.add(new Product(name, price));
+
             }
-            //TODO: finalizar com o retorno de Price Tags
-
-
         }
 
+        System.out.println();
+        System.out.println("PRICE TAGS: ");
+        for (Product product : list){
+            System.out.println(product.getName() + "$ " + String.format("%.2f", product.getPrice()));
+        }
 
         sc.close();
     }
