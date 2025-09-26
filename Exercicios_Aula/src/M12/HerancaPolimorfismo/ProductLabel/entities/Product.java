@@ -4,7 +4,6 @@ public class Product {
     private String name;
     private Double price;
 
-// TODO: Constructor, gets and sets
     public Product(String name, Double price){
         this.name = name;
         this.price = price;
@@ -26,10 +25,7 @@ public class Product {
         this.price = price;
     }
 
-    // TODO: String priceTag name + price
-
     public String priceTag(){
         return name + " $ " + String.format("%.2f", price);
     }
-
 }
