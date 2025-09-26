@@ -2,7 +2,10 @@ package M12.HerancaPolimorfismo.ProductLabel.application;
 
 import M12.HerancaPolimorfismo.ProductLabel.entities.ImportedProduct;
 import M12.HerancaPolimorfismo.ProductLabel.entities.Product;
+import M12.HerancaPolimorfismo.ProductLabel.entities.UsedProduct;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -34,7 +37,8 @@ public class Program {
                 list.add(new ImportedProduct(name, price, customsFee));
             } else if (ch == 'u') {
                 System.out.print("Manufacture date (DD/MM/YYYY): ");
-                // TODO: descobrir como solicitar tempo, variavel necessaria e aplicação
+                LocalDate date = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                list.add(new UsedProduct(name, price,date));
             }
             else {
                 list.add(new Product(name, price));
