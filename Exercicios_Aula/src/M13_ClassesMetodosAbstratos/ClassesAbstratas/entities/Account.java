@@ -1,5 +1,5 @@
 package M13_ClassesMetodosAbstratos.ClassesAbstratas.entities;
-
+// NOTE: Classe abstrata
 public abstract class Account {
 
     private Integer number;
