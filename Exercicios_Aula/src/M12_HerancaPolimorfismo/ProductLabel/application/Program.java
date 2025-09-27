@@ -1,8 +1,8 @@
-package M12.HerancaPolimorfismo.ProductLabel.application;
+package M12_HerancaPolimorfismo.ProductLabel.application;
 
-import M12.HerancaPolimorfismo.ProductLabel.entities.ImportedProduct;
-import M12.HerancaPolimorfismo.ProductLabel.entities.Product;
-import M12.HerancaPolimorfismo.ProductLabel.entities.UsedProduct;
+import M12_HerancaPolimorfismo.ProductLabel.entities.ImportedProduct;
+import M12_HerancaPolimorfismo.ProductLabel.entities.Product;
+import M12_HerancaPolimorfismo.ProductLabel.entities.UsedProduct;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

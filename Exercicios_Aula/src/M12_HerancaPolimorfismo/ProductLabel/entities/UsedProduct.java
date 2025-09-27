@@ -1,4 +1,4 @@
-package M12.HerancaPolimorfismo.ProductLabel.entities;
+package M12_HerancaPolimorfismo.ProductLabel.entities;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

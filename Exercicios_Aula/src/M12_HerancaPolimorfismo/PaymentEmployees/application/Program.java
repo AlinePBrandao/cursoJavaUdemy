@@ -1,7 +1,7 @@
-package M12.HerancaPolimorfismo.PaymentEmployees.application;
+package M12_HerancaPolimorfismo.PaymentEmployees.application;
 
-import M12.HerancaPolimorfismo.PaymentEmployees.entities.Employee;
-import M12.HerancaPolimorfismo.PaymentEmployees.entities.OutSourceEmployee;
+import M12_HerancaPolimorfismo.PaymentEmployees.entities.Employee;
+import M12_HerancaPolimorfismo.PaymentEmployees.entities.OutSourceEmployee;
 
 import java.util.ArrayList;
 import java.util.List;

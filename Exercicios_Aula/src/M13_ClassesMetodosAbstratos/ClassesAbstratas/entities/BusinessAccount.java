@@ -1,6 +1,6 @@
-package M12.HerancaPolimorfismo.Heranca.entities;
+package M13_ClassesMetodosAbstratos.ClassesAbstratas.entities;
 
-public class BusinessAccount extends Account{
+public class BusinessAccount extends Account {
 //extends "importa" a classe
     private Double loanLimit;
 

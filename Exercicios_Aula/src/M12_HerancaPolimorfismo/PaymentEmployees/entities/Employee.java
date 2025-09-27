@@ -1,4 +1,4 @@
-package M12.HerancaPolimorfismo.PaymentEmployees.entities;
+package M12_HerancaPolimorfismo.PaymentEmployees.entities;
 
 public class Employee {
     private String name;

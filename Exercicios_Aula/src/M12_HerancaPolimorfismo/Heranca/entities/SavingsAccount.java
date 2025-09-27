@@ -1,4 +1,4 @@
-package M12.HerancaPolimorfismo.Heranca.entities;
+package M12_HerancaPolimorfismo.Heranca.entities;
 
 public class SavingsAccount extends Account {
 

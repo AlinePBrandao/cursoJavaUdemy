@@ -1,4 +1,4 @@
-package M12.HerancaPolimorfismo.ProductLabel.entities;
+package M12_HerancaPolimorfismo.ProductLabel.entities;
 
 public class ImportedProduct extends Product{
 
