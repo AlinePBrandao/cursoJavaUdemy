@@ -25,8 +25,20 @@ public class Program {
 
         for (int i = 1; i<=n; i++){
             System.out.print("Shape #" + i + " data: ");
-            System.out.print("Rectangle or Circle (r/c)? ");
-            char ch = sc.next().charAt(0);
+
+            char ch;
+            while (true){
+                System.out.print("Rectangle or Circle (r/c)? ");
+                ch = sc.next().charAt(0);
+
+                if (ch == 'r' || ch == 'c'){
+                    break;
+                }
+                else {
+                    System.out.println("Invalid option. Please enter 'r' for Rectangle or 'c' for Circle.");
+                }
+            }
+
             System.out.print("Color (BLACK/BLUE/RED): ");
             Color color = Color.valueOf(sc.next());
 
@@ -48,12 +60,13 @@ public class Program {
                 list.add(new Circle(color, radius));
             }
 
-            // TODO: case de erro com retorno de erro e nova tentativa
-            else {
-
-            }
         }
 
+        System.out.println();
+        System.out.println("SHAPE AREAS: ");
+        for (Shape shape : list ){
+            System.out.println(String.format("%.2f", shape.area()));
+        }
         sc.close();
     }
 }
