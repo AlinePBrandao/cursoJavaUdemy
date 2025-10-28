@@ -36,6 +36,6 @@ public class Rectangle extends Shape {
     // TODO: sobrescrita do método
     @Override
     public double area() {
-        return 0;
+        return width * height;
     }
 }
