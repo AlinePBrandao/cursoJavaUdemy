@@ -33,7 +33,7 @@ public class Rectangle extends Shape {
     // NOTE: classe precisa aplicar o metodo shape.area
     // NOTE: Como a classe não é abstrata, ela é obrigada a sobrescrever o metodo abstrato da superclasse (area)
 
-    // TODO: sobrescrita do método
+    // NOTE: sobrescrita do metodo
     @Override
     public double area() {
         return width * height;
