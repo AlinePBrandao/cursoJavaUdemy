@@ -20,6 +20,16 @@ public class Program {
             char ch = sc.next().charAt(0);
             System.out.print("Color (BLACK/BLUE/RED): ");
             Color color = Color.valueOf(sc.next());
+
+            if (ch == 'r'){
+                System.out.print("Width: ");
+                double width = sc.nextDouble();
+
+                System.out.print("Height: ");
+                double height = sc.nextDouble();
+
+                // TODO: instanciar rectangle e armazenar em uma list
+            }
         }
 
         sc.close();
