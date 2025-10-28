@@ -1,7 +1,11 @@
 package M13_ClassesMetodosAbstratos.Metodos.application;
 
+import M13_ClassesMetodosAbstratos.Metodos.entities.Shape;
+import M13_ClassesMetodosAbstratos.Metodos.entities.Rectangle;
 import M13_ClassesMetodosAbstratos.Metodos.entities.enums.Color;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -10,6 +14,10 @@ public class Program {
 
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
+
+        List<Shape> list = new ArrayList<>();
+        //NOTE: usar tipo generico na coleçao para polimorfismo, list declarada do tipo da superclasse
+        //NOTE: dessa forma a list aceita dados de todas as subclasses (Rectangle e Circle)
 
         System.out.print("Enter the number of shapes: ");
         int n = sc.nextInt();
@@ -28,7 +36,8 @@ public class Program {
                 System.out.print("Height: ");
                 double height = sc.nextDouble();
 
-                // TODO: instanciar rectangle e armazenar em uma list
+                // NOTE: fazer o import manual do Rectangle facilita na instanciação do rectangle correto
+                list.add(new Rectangle(color, width, height));
             }
         }
 
