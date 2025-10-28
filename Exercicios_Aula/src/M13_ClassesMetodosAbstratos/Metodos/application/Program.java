@@ -16,6 +16,7 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        // NOTE: variaveis ou coleções de um tipo abstrato (SHAPE)
         List<Shape> list = new ArrayList<>();
         //NOTE: usar tipo generico na coleçao para polimorfismo, list declarada do tipo da superclasse
         //NOTE: dessa forma a list aceita dados de todas as subclasses (Rectangle e Circle)
@@ -51,6 +52,7 @@ public class Program {
 
                 // NOTE: fazer o import manual do Rectangle facilita na instanciação do rectangle correto
                 list.add(new Rectangle(color, width, height));
+                //NOTE: upcasting para shape permitindo o funcionamwento da list
             }
             else if (ch == 'c') {
                 System.out.print("Radius: ");
@@ -58,6 +60,7 @@ public class Program {
 
                 // NOTE: fazer o import manual do Circle facilita na instanciação do circle correto
                 list.add(new Circle(color, radius));
+                //NOTE: upcasting para shape permitindo o funcionamwento da list
             }
 
         }
@@ -66,6 +69,7 @@ public class Program {
         System.out.println("SHAPE AREAS: ");
         for (Shape shape : list ){
             System.out.println(String.format("%.2f", shape.area()));
+            //NOTE: na area foi feito polimorfismo para calculo da area de acordo com o objeto (rectangle ou circle.
         }
         sc.close();
     }
