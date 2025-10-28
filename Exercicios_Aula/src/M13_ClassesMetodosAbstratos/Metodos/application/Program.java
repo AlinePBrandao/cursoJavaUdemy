@@ -2,6 +2,7 @@ package M13_ClassesMetodosAbstratos.Metodos.application;
 
 import M13_ClassesMetodosAbstratos.Metodos.entities.Shape;
 import M13_ClassesMetodosAbstratos.Metodos.entities.Rectangle;
+import M13_ClassesMetodosAbstratos.Metodos.entities.Circle;
 import M13_ClassesMetodosAbstratos.Metodos.entities.enums.Color;
 
 import java.util.ArrayList;
@@ -38,6 +39,18 @@ public class Program {
 
                 // NOTE: fazer o import manual do Rectangle facilita na instanciação do rectangle correto
                 list.add(new Rectangle(color, width, height));
+            }
+            else if (ch == 'c') {
+                System.out.print("Radius: ");
+                double radius = sc.nextDouble();
+
+                // NOTE: fazer o import manual do Circle facilita na instanciação do circle correto
+                list.add(new Circle(color, radius));
+            }
+
+            // TODO: case de erro com retorno de erro e nova tentativa
+            else {
+
             }
         }
 
