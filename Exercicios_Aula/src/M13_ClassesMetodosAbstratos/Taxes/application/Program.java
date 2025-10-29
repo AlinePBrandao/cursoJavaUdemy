@@ -25,11 +25,12 @@ public class Program {
         int n = sc.nextInt();
 
         for (int i=1; i<=n; i++){
-            System.out.print("Tax payer #" + i + " data: ");
+            System.out.println();
+            System.out.println("Tax payer #" + i + " data: ");
             System.out.print("Individual or company (i/c)? ");
             char ch = sc.next().charAt(0);
             System.out.print("Name: ");
-            String name = sc.nextLine();
+            String name = sc.next();
             System.out.print("Annual Income: ");
             double annualIncome = sc.nextDouble();
 
@@ -46,9 +47,24 @@ public class Program {
 
                 list.add(new Corporation(name, annualIncome, totalEmployees));
             }
-
-
+            else {
+                System.out.println("Invalid option.");
+            }
         }
 
+        System.out.println();
+        System.out.println("TAXES PAID:");
+        for (TaxPayer tp : list){
+            System.out.println(tp.getName() + ": $ " + String.format("%.2f", tp.tax()));
+        }
+
+        System.out.println();
+        double sum = 0.0;
+        for (TaxPayer tp : list){
+            sum += tp.tax();
+        }
+        System.out.println("TOTAL TAXES: $" + String.format("%.2f", sum));
+
+        sc.close();
     }
 }
