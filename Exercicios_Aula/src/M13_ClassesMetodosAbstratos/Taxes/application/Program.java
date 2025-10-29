@@ -1,5 +1,6 @@
 package M13_ClassesMetodosAbstratos.Taxes.application;
 
+import M13_ClassesMetodosAbstratos.Taxes.entities.Corporation;
 import M13_ClassesMetodosAbstratos.Taxes.entities.Individual;
 import M13_ClassesMetodosAbstratos.Taxes.entities.TaxPayer;
 
@@ -40,8 +41,10 @@ public class Program {
             }
 
             else if (ch == 'c') {
+                System.out.print("Number of employees: ");
+                int totalEmployees = sc.nextInt();
 
-
+                list.add(new Corporation(name, annualIncome, totalEmployees));
             }
 
 
