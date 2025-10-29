@@ -18,8 +18,15 @@ public class Individual extends TaxPayer {
     }
 
     @Override
-    public double tax() {
-        // TODO: retornar taxa = annuelIncome * taxa
-        return getAnnualIncome() * ;
+    public double tax(){
+        //NOTE: Expressão Condicional Ternaria
+        double basicTax = (getAnnualIncome() < 20000.0) ? getAnnualIncome() * 0.15 :  getAnnualIncome() * 0.25;
+
+        basicTax = basicTax - (getHealthcareExpenses() * 0.5);
+        if (basicTax < 0.0){ // NOTE: caso o gasto com saude seja maior que o valor a pagar, o retorno será 0.
+            basicTax = 0.0;
+        }
+        return basicTax;
     }
+
 }
