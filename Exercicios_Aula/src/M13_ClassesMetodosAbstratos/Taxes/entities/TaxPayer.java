@@ -1,6 +1,6 @@
 package M13_ClassesMetodosAbstratos.Taxes.entities;
 
-public class TaxPayer {
+public abstract class TaxPayer {
 
     private String name;
     private  Double annualIncome;
@@ -26,7 +26,5 @@ public class TaxPayer {
         this.annualIncome = annualIncome;
     }
 
-    public double tax() {
-        return 0;
-    }
+    public abstract double tax();
 }

@@ -19,6 +19,7 @@ public class Individual extends TaxPayer {
 
     @Override
     public double tax() {
-        return getAnnualIncome() * tax();
+        // TODO: retornar taxa = annuelIncome * taxa
+        return getAnnualIncome() * ;
     }
 }
