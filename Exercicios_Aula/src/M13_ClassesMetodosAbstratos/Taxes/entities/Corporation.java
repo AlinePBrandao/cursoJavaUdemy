@@ -1,18 +1,29 @@
 package M13_ClassesMetodosAbstratos.Taxes.entities;
 
-public class Corporation {
+public class Corporation  extends TaxPayer{
 
-    private Integer totalEmployess;
+    private Integer totalEmployees;
 
-    public Corporation(Integer totalEmployess) {
-        this.totalEmployess = totalEmployess;
+    public Corporation(String name, Double annualIncome, Integer totalEmployees) {
+        super(name, annualIncome);
+        this.totalEmployees = totalEmployees;
     }
 
-    public Integer getTotalEmployess() {
-        return totalEmployess;
+    public Integer getTotalEmployees() {
+        return totalEmployees;
     }
 
-    public void setTotalEmployess(Integer totalEmployess) {
-        this.totalEmployess = totalEmployess;
+    public void setTotalEmployees(Integer totalEmployees) {
+        this.totalEmployees = totalEmployees;
     }
+
+    @Override
+    public double tax() {
+        return 0;
+    }
+
+
+
+
+
 }
