@@ -19,7 +19,10 @@ public class Corporation  extends TaxPayer{
 
     @Override
     public double tax() {
-        return 0;
+        //NOTE: Expressão Condicional Ternaria
+        double basicTax = (totalEmployees > 10) ? getAnnualIncome() * 0.14 : getAnnualIncome() * 0.16;
+
+        return basicTax;
     }
 
 
