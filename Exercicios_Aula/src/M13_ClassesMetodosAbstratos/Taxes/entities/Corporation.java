@@ -25,8 +25,4 @@ public class Corporation  extends TaxPayer{
         return basicTax;
     }
 
-
-
-
-
 }
