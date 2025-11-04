@@ -1,11 +1,26 @@
 package M14_TratamentoExceptions.estruturaTryCatch;
 
+import java.lang.reflect.Method;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class EstruturaTryCatch {
     public static void main(String[] args) {
 
+        method1();
+
+        System.out.println("End of program");
+
+    }
+
+    public static void method1(){
+        System.out.println("***METHOD1  STARTED***");
+        method2();
+        System.out.println("***METHOD1  FINISHED***");
+    }
+    public static void method2(){
+
+        System.out.println("***METHOD2  STARTED***");
         Scanner sc = new Scanner(System.in);
 
         try {
@@ -17,13 +32,14 @@ public class EstruturaTryCatch {
 
         catch (ArrayIndexOutOfBoundsException e){
             System.out.println("Invalid position");
+            e.printStackTrace();
+            // NOTE: imprime o rastreamento do stack (lista com tipo da exceção e a sequência de chamadas)
+            sc.next();
         }
-         catch (InputMismatchException e){
-                    System.out.println("Imput error");
+        catch (InputMismatchException e){
+            System.out.println("Imput error");
         }
-
-        System.out.println("End of program");
-
         sc.close();
+        System.out.println("***METHOD2  FINISHED***");
     }
 }
