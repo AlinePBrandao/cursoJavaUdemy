@@ -7,11 +7,11 @@ import java.util.Scanner;
 public class blocoFinally {
 
     public static void main(String[] args) {
-        File file = new File("C:\\Users\\aline\\OneDrive\\Documentos\\Java Materiais\\in.txt.txt");
+        File file = new File("C:\\Users\\aline\\OneDrive\\Documentos\\Java Materiais\\in.txt");
         //NOTE: recebendo arquivo local
         Scanner sc = null;
         try {
-            sc = new Scanner(file); //NOTE: Scanner instanciado apontando para o arquivo
+            sc = new Scanner(file); //NOTE: Scanner instanciado apontando para ler o arquivo
             while (sc.hasNextLine()){ //NOTE: se o arquivo existir, ler o arquivo
                 System.out.println(sc.nextLine());
             }
@@ -22,6 +22,7 @@ public class blocoFinally {
         }
         //NOTE: independente de dar certo ou não o Scanner será fechado
         finally {
+            //NOTE: executado independentemente do bloco try dar certo ou não
             if (sc != null){
                 sc.close();
             }
