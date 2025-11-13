@@ -1,4 +1,4 @@
-package M14_TratamentoExceptions.estruturaTryCatch;
+package M14_TratamentoExceptions.EstruturaTryCatch;
 
 import java.io.File;
 import java.io.FileNotFoundException;

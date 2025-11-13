@@ -1,6 +1,5 @@
-package M14_TratamentoExceptions.estruturaTryCatch;
+package M14_TratamentoExceptions.EstruturaTryCatch;
 
-import java.lang.reflect.Method;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
