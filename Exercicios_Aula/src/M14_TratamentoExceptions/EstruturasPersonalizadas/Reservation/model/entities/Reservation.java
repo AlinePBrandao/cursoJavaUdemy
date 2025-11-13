@@ -1,16 +1,21 @@
 package M14_TratamentoExceptions.EstruturasPersonalizadas.Reservation.model.entities;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class Reservation {
     private Integer roomNumber;
-    private Date checkin;
-    private Date checkout;
+    private Date checkIn;
+    private Date checkOut;
 
-    public Reservation(Integer roomNumber, Date checkin, Date checkout) {
+    private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+    //NOTE: dado estátio pra que não seja instanciado novo sdt p cada obj Reservation da aplicação, será necessário apenas 1
+
+    public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
         this.roomNumber = roomNumber;
-        this.checkin = checkin;
-        this.checkout = checkout;
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
     }
 
     public Integer getRoomNumber() {
@@ -21,17 +26,33 @@ public class Reservation {
         this.roomNumber = roomNumber;
     }
 
-    public Date getCheckin() {
-        return checkin;
+    public Date getCheckIn() {
+        return checkIn;
     }
 
 
-    public Date getCheckout() {
-        return checkout;
+    public Date getCheckOut() {
+        return checkOut;
     }
 
     //NOTE: checkin e checkout sem set porque as datas não podem ser alteradas arbitrariamente
 
+    //NOTE: long para facilitar no retorno de valor que será longo
+    public long duration() {
+        long diff = checkOut.getTime() - checkIn.getTime(); //NOTE: diferença entre as datas em milissegundos
+        return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS); //NOTE: convertendo milissegundos para dias
+    }
+
+    public void updateDates(Date checkIn, Date checkOut){
+        this.checkIn = checkIn;
+        this.checkOut = checkOut;
+    }
+
+    @Override
+    public String toString(){
+        return "Room " + roomNumber + ", check-in: " + sdf.format(checkIn) + ", check-in: " + sdf.format(checkOut)
+                + ", " + duration() + " nights";
+    }
 
 
 }
