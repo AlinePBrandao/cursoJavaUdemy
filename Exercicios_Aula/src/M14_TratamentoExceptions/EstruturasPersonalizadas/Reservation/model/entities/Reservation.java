@@ -10,7 +10,7 @@ public class Reservation {
     private Date checkOut;
 
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-    //NOTE: dado estátio pra que não seja instanciado novo sdt p cada obj Reservation da aplicação, será necessário apenas 1
+    //NOTE: dado estático pra que não seja instanciado novo sdt p cada obj Reservation da aplicação, será necessário apenas 1
 
     public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
         this.roomNumber = roomNumber;
@@ -30,19 +30,19 @@ public class Reservation {
         return checkIn;
     }
 
-
     public Date getCheckOut() {
         return checkOut;
     }
 
     //NOTE: checkin e checkout sem set porque as datas não podem ser alteradas arbitrariamente
 
-    //NOTE: long para facilitar no retorno de valor que será longo
+    //NOTE: long para facilitar no retorno de valor (tempo) que será longo
     public long duration() {
         long diff = checkOut.getTime() - checkIn.getTime(); //NOTE: diferença entre as datas em milissegundos
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS); //NOTE: convertendo milissegundos para dias
     }
 
+    //Recebe datas novas e atualiza checkin e checkout
     public void updateDates(Date checkIn, Date checkOut){
         this.checkIn = checkIn;
         this.checkOut = checkOut;
@@ -50,7 +50,7 @@ public class Reservation {
 
     @Override
     public String toString(){
-        return "Room " + roomNumber + ", check-in: " + sdf.format(checkIn) + ", check-in: " + sdf.format(checkOut)
+        return "Room " + roomNumber + ", check-in: " + sdf.format(checkIn) + ", check-out: " + sdf.format(checkOut)
                 + ", " + duration() + " nights";
     }
 }
