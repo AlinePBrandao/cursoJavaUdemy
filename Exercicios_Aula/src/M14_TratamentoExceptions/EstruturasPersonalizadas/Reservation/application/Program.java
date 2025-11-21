@@ -29,6 +29,17 @@ public class Program {
         else {
             Reservation reservation = new Reservation(number, checkIn, checkOut);
             System.out.println("Reservation: " + reservation);
+
+            System.out.println();
+            System.out.println("Enter data to update the reservation: ");
+            System.out.print("Check-in date (dd/MM/yyyy): ");
+            checkIn = sdf.parse(sc.next());
+            System.out.print("Check-out date (dd/MM/yyyy): ");
+            checkOut = sdf.parse(sc.next());
+
+            //NOTE: leu as nhovas datas e atualiza
+            reservation.updateDates(checkIn, checkOut);
+            System.out.println("Reservation: " + reservation);
         }
 
         sc.close();
