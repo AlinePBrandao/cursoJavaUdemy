@@ -43,7 +43,11 @@ public class Reservation {
     }
 
     //Recebe datas novas e atualiza checkin e checkout
-    public void updateDates(Date checkIn, Date checkOut){
+    public String updateDates(Date checkIn, Date checkOut){
+        Date now = new Date();
+        if (checkIn.before(now) || checkOut.before(now)) {
+            System.out.println("Error in reservation: Reservation dates for update must be future dates");
+        }
         this.checkIn = checkIn;
         this.checkOut = checkOut;
     }
