@@ -37,12 +37,10 @@ public class Program {
             System.out.print("Check-out date (dd/MM/yyyy): ");
             checkOut = sdf.parse(sc.next());
 
-            //NOTE: regra de validação: data de checkOut não pode ser anterior a checkIn
 
 
-            else if (!checkOut.after(checkIn)){ //NOTE: data de checkOut não for posterior a check-in
-                System.out.println("Error in reservation: Check-out date must be after check-in date");
-            }
+
+
 
             else {
                 //NOTE: leu as novas datas e atualiza

@@ -45,11 +45,16 @@ public class Reservation {
     //Recebe datas novas e atualiza checkin e checkout
     public String updateDates(Date checkIn, Date checkOut){
         Date now = new Date();
+        //NOTE: regra de validação: data de checkOut não pode ser anterior a checkIn
         if (checkIn.before(now) || checkOut.before(now)) {
-            System.out.println("Error in reservation: Reservation dates for update must be future dates");
+            return "Error in reservation: Reservation dates for update must be future dates";
+        }
+        else if (!checkOut.after(checkIn)){ //NOTE: data de checkOut não for posterior a check-in
+            return "Error in reservation: Check-out date must be after check-in date";
         }
         this.checkIn = checkIn;
         this.checkOut = checkOut;
+        return null; //NOTE: se retornar nulo não deu erro, se retornar alguma das Strings deu erro
     }
 
     @Override
