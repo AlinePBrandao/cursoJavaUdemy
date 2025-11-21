@@ -1,5 +1,7 @@
 package M14_TratamentoExceptions.EstruturasPersonalizadas.Reservation.application;
 
+import M14_TratamentoExceptions.EstruturasPersonalizadas.Reservation.model.entities.Reservation;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,9 +16,20 @@ public class Program {
         System.out.print("Room number: ");
         int number = sc.nextInt();
         System.out.print("Check-in date (dd/MM/yyyy): ");
-        Date checkin = sdf.parse(sc.next()); //NOTE: recebe a data em format text e sdf converte para date
+        Date checkIn = sdf.parse(sc.next()); //NOTE: recebe a data em format text e sdf converte para date
         //NOTE: metodo parse gera uma parse exception, como o tratamento da exception ainda não será feito,
         //usa-se a autocorreção (throws ParseException) para propagar a exception sem tratar (try catch)
+
+        System.out.print("Check-out date (dd/MM/yyyy): ");
+        Date checkOut = sdf.parse(sc.next());
+
+        if (! checkOut.after(checkIn)){ //NOTE: data de check-out antes que check-in
+            System.out.println("Error in reservation: Check-out date must be after check-in date");
+        }
+        else {
+            Reservation reservation = new Reservation(number, checkIn, checkOut);
+            System.out.println("Reservation: " + reservation);
+        }
 
         sc.close();
 
