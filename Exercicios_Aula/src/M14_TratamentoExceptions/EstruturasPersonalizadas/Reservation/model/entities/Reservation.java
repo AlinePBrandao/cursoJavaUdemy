@@ -47,10 +47,10 @@ public class Reservation {
         Date now = new Date();
         //NOTE: regra de validação: data de checkOut não pode ser anterior a checkIn
         if (checkIn.before(now) || checkOut.before(now)) {
-            return "Error in reservation: Reservation dates for update must be future dates";
+            return "Reservation dates for update must be future dates";
         }
         else if (!checkOut.after(checkIn)){ //NOTE: data de checkOut não for posterior a check-in
-            return "Error in reservation: Check-out date must be after check-in date";
+            return "Check-out date must be after check-in date";
         }
         this.checkIn = checkIn;
         this.checkOut = checkOut;

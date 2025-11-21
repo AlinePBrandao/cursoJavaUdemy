@@ -23,6 +23,7 @@ public class Program {
         System.out.print("Check-out date (dd/MM/yyyy): ");
         Date checkOut = sdf.parse(sc.next());
 
+        //NOTE: essa validação precisa ser no constructor
         if (!checkOut.after(checkIn)){ //NOTE: data de check-out antes que check-in
             System.out.println("Error in reservation: Check-out date must be after check-in date");
         }
@@ -37,14 +38,13 @@ public class Program {
             System.out.print("Check-out date (dd/MM/yyyy): ");
             checkOut = sdf.parse(sc.next());
 
-
-
-
-
-
+            //NOTE: caso de erro
+            String error = reservation.updateDates(checkIn, checkOut);
+            if (error != null){
+                System.out.println("Error in reservation" + error);
+            }
             else {
-                //NOTE: leu as novas datas e atualiza
-                reservation.updateDates(checkIn, checkOut);
+                //NOTE: sem erro, le as novas datas e atualiza
                 System.out.println("Reservation: " + reservation);
             }
         }
