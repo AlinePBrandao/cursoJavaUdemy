@@ -43,18 +43,18 @@ public class Reservation {
     }
 
     //Recebe datas novas e atualiza checkin e checkout
-    public String updateDates(Date checkIn, Date checkOut){
+    public void updateDates(Date checkIn, Date checkOut){
         Date now = new Date();
+        //NOTE: metodo não retornará uma String com mensagem de erro, e sim lançar uma exception caso ela ocorra
         //NOTE: regra de validação: data de checkOut não pode ser anterior a checkIn
         if (checkIn.before(now) || checkOut.before(now)) {
-            return "Reservation dates for update must be future dates";
+           throw new IllegalArgumentException("Reservation dates for update must be future dates");
         }
         else if (!checkOut.after(checkIn)){ //NOTE: data de checkOut não for posterior a check-in
-            return "Check-out date must be after check-in date";
+            throw new IllegalArgumentException("Check-out date must be after check-in date");
         }
         this.checkIn = checkIn;
         this.checkOut = checkOut;
-        return null; //NOTE: se retornar nulo não deu erro, se retornar alguma das Strings deu erro
     }
 
     @Override
