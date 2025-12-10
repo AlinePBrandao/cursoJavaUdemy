@@ -1,5 +1,7 @@
 package M14_TratamentoExceptions.EstruturasPersonalizadas.Reservation.model.entities;
 
+import M14_TratamentoExceptions.EstruturasPersonalizadas.Reservation.model.exceptions.DomainException;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -10,9 +12,13 @@ public class Reservation {
     private Date checkOut;
 
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-    //NOTE: dado estático pra que não seja instanciado novo sdt p cada obj Reservation da aplicação, será necessário apenas 1
+    //NOTE: dado estático para que não seja instanciado novo sdt p cada obj Reservation da aplicação, será necessário apenas 1
 
-    public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
+    public Reservation(Integer roomNumber, Date checkIn, Date checkOut){ //NOTE: propagando a exception
+        //NOTE: Exception lançada no constructor
+        if (!checkOut.after(checkIn)){ //NOTE: data de checkOut não for posterior a check-in
+            throw new DomainException("Check-out date must be after check-in date");
+        }
         this.roomNumber = roomNumber;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
@@ -44,14 +50,15 @@ public class Reservation {
 
     //Recebe datas novas e atualiza checkin e checkout
     public void updateDates(Date checkIn, Date checkOut){
+        //NOTE: Propagar a exception
         Date now = new Date();
-        //NOTE: metodo não retornará uma String com mensagem de erro, e sim lançar uma exception caso ela ocorra
+
         //NOTE: regra de validação: data de checkOut não pode ser anterior a checkIn
         if (checkIn.before(now) || checkOut.before(now)) {
-           throw new IllegalArgumentException("Reservation dates for update must be future dates");
+           throw new DomainException("Reservation dates for update must be future dates");
         }
-        else if (!checkOut.after(checkIn)){ //NOTE: data de checkOut não for posterior a check-in
-            throw new IllegalArgumentException("Check-out date must be after check-in date");
+        if (!checkOut.after(checkIn)){ //NOTE: data de checkOut não for posterior a check-in
+            throw new DomainException("Check-out date must be after check-in date");
         }
         this.checkIn = checkIn;
         this.checkOut = checkOut;
