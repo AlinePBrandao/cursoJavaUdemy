@@ -24,7 +24,15 @@ public class Program {
         try (BufferedReader br = new BufferedReader(new FileReader(sourceFile))) {
             String itemCsv = br.readLine();
             while (itemCsv != null){
-                System.out.println(itemCsv);
+
+                String[] fields = itemCsv.split(",");
+                String name = fields[0];
+                double price = Double.parseDouble(fields[1]);
+                Integer quantity = Integer.parseInt(fields[2]);
+
+                list.add(new Product(name, price, quantity));
+
+
                 itemCsv = br.readLine();
             }
         }
