@@ -3,10 +3,11 @@ package M15_Archives.Exercise.application;
 import M15_Archives.Exercise.entities.Product;
 
 import java.io.*;
+import java.text.ParseException;
 import java.util.*;
 
 public class Program {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
@@ -26,23 +27,28 @@ public class Program {
             while (itemCsv != null){
 
                 String[] fields = itemCsv.split(",");
-                String name = fields[0];
+                String product = fields[0];
                 double price = Double.parseDouble(fields[1]);
                 Integer quantity = Integer.parseInt(fields[2]);
 
-                list.add(new Product(name, price, quantity));
-
+                list.add(new Product(product, price, quantity));
 
                 itemCsv = br.readLine();
+            }
+            try(BufferedWriter bw = new BufferedWriter(new FileWriter(targetFile))){
+                for (Product item : list){
+                    bw.write(item.getProduct() + ", " + String.format("%.2f", item.totalPrice()));
+                    bw.newLine();
+                }
+                System.out.println(targetFile + "CREATED");
+            }
+            catch (IOException e){
+                System.out.println("Error writing file: " + e.getMessage());
             }
         }
         catch (IOException e){
             System.out.println("Error writing file: " + e.getMessage());
         }
-
-
-
         sc.close();
     }
-
 }
